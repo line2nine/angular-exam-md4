@@ -27,7 +27,7 @@ export class EditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private connectService: ConnectService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -47,6 +47,7 @@ export class EditComponent implements OnInit {
       this.connectService.update(id, value).subscribe(
         next => {
           this.router.navigate(['/book/list']);
+          alert('Edit Completed');
         },
         error => console.log(error)
       );

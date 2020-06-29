@@ -10,14 +10,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let book of bookList; index as i">
+                <tr *ngFor="let book of searchList; index as i">
                     <th scope="row">{{i+1}}</th>
                     <td>{{book.title}}</td>
                     <td>{{book.author}}</td>
                     <td>
-                        <a class="btn btn-info mr-2" [routerLink]="['/book', book.id, 'detail']"><i class="fa fa-search"></i> View</a>
-                        <a class="btn btn-success mr-2" [routerLink]="['/book', book.id, 'edit']"><i class="fa fa-edit"></i> Edit</a>
-                        <button class="btn btn-danger" (click)="deletePost(i)"><i class="fa fa-trash"></i> Delete</button>
+                        <a class="btn btn-info mr-2" [routerLink]="['/book', book.id, 'detail']"><i
+                                class="fa fa-search"></i> View</a>
+                        <a class="btn btn-success mr-2" [routerLink]="['/book', book.id, 'edit']"><i
+                                class="fa fa-edit"></i> Edit</a>
+                        <button class="btn btn-danger" (click)="deletePost(i)"><i class="fa fa-trash"></i>
+                            Delete</button>
                     </td>
                 </tr>
             </tbody>
